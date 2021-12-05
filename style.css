@@ -37,6 +37,7 @@
 /* Universal Tag */
 * {
   box-sizing: border-box;
+  margin: 0;
 }
 
 body {
@@ -91,12 +92,20 @@ p {
 
 /* Navbar */
 #navbar {
+  position: fixed;
+  width: 100%;
   padding: 16px;
   display: flex;
   justify-content: space-between;
-  background-color: var(--color-pink);
+  background-color: transparent;
   align-items: center;
   color: var(--color-white);
+  transition: all var(--animation-duration) ease-in-out;
+}
+
+#navbar.navbar--dark {
+  background-color: var(--color-pink);
+  padding: 8px;
 }
 .navbar__logo {
   font-size: var(--font-medium);
@@ -130,6 +139,7 @@ p {
 #home {
   background: url("imgs/home-background.png") center/cover no-repeat;
   padding: 40px;
+  padding-top: 120px;
   text-align: center;
 }
 
